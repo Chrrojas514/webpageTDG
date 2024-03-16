@@ -5,9 +5,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <title>Tower defense game?</title>
-      <div className={styles.description}>
         <GameWindow />
-      </div>
     </main>
   );
 }
