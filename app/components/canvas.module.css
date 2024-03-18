@@ -3,3 +3,13 @@
   border: solid;
   border-color: black;
 }
+
+.clearButtonDiv {
+  text-align: right;
+}
+
+.clearButton {
+  background-color: rgb(200, 7, 7);
+  padding: 2px 3px;
+  color: whitesmoke;
+}

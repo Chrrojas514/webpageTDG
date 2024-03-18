@@ -12,17 +12,8 @@ function GameWindow() {
   //initializes the canvas when the component is mounted (thats why dependecy array is empty?)
   useEffect(() => {
     const canvas = canvasRef.current
-    // For screens with higher pixel density we multiply width and height by 2
-    // canvas.width = window.innerWidth
-    // canvas.height = window.innerHeight
-    // canvas.style.width = `${window.innerWidth}px`
-    // canvas.style.height = `${window.innerHeight}px`
 
     const ctx = canvas.getContext('2d')
-    //Also done for high density screens
-    // ctx.scale(2,2)
-
-    //Settings for canvas element
     ctx.lineCap = 'round'
     ctx.strokeStyle = 'rgb(0,127,0)'
     ctx.lineWidth = 5
@@ -38,7 +29,6 @@ function GameWindow() {
     const {offsetX, offsetY} = nativeEvent
     ctxRef.current.lineTo(offsetX, offsetY)
     ctxRef.current.stroke() //draws the stroke
-    console.log('testing')
   }
 
   const penDown = ({nativeEvent}) => {
@@ -46,13 +36,10 @@ function GameWindow() {
     ctxRef.current.beginPath()
     ctxRef.current.moveTo(offsetX, offsetY)
     isDrawing(true)
-    console.log('MOUSE DOWN')
-    console.log({offsetX, offsetY})
   }
 
   const penUp = () => {
     ctxRef.current.closePath()
-    console.log('MOUSE UP')
     isDrawing(false)
   }
 
