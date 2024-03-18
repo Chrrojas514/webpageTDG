@@ -13,14 +13,14 @@ function GameWindow() {
   useEffect(() => {
     const canvas = canvasRef.current
     // For screens with higher pixel density we multiply width and height by 2
-    canvas.width = window.innerWidth * 2
-    canvas.height = window.innerHeight * 2
-    canvas.style.width = `${window.innerWidth}px`
-    canvas.style.height = `${window.innerHeight}px`
+    // canvas.width = window.innerWidth
+    // canvas.height = window.innerHeight
+    // canvas.style.width = `${window.innerWidth}px`
+    // canvas.style.height = `${window.innerHeight}px`
 
     const ctx = canvas.getContext('2d')
     //Also done for high density screens
-    ctx.scale(2,2)
+    // ctx.scale(2,2)
 
     //Settings for canvas element
     ctx.lineCap = 'round'
@@ -60,6 +60,8 @@ function GameWindow() {
     <canvas
       className={styles.frame}
       ref={canvasRef}
+      width={900}
+      height={500}
       onMouseDown={penDown}
       onMouseMove={draw}
       onMouseUp={penUp}

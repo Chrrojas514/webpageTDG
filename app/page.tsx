@@ -4,10 +4,12 @@ import styles from "./page.module.css";
 export default function Home() {
   return (
     <main className={styles.main}>
+      <meta charSet="utf-8"></meta>
       <title>Tower defense game?</title>
-        <div>
-          <GameWindow />
-        </div>
+      <h1 className={styles.gameHeader}>Learning Canvas API with react in Next.js Framework!</h1>
+      <div className={styles.canvas_container}>
+        <GameWindow />
+      </div>
     </main>
   );
 }
