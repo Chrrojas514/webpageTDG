@@ -43,16 +43,25 @@ function GameWindow() {
     isDrawing(false)
   }
 
+  const handleClearClick = () => {
+    ctxRef.current.clearRect(0,0,900, 500)
+  }
+
   return (
-    <canvas
-      className={styles.frame}
-      ref={canvasRef}
-      width={900}
-      height={500}
-      onMouseDown={penDown}
-      onMouseMove={draw}
-      onMouseUp={penUp}
-    />
+    <div>
+      <canvas
+        className={styles.frame}
+        ref={canvasRef}
+        width={900}
+        height={500}
+        onMouseDown={penDown}
+        onMouseMove={draw}
+        onMouseUp={penUp}
+      />
+      <div className={styles.clearButtonDiv}>
+        <button className={styles.clearButton} onClick={() => handleClearClick()}>Clear Canvas</button>
+      </div>
+    </div>
   )
 }
 

@@ -10,7 +10,6 @@ export default function Home() {
       <h1 className={styles.gameHeader}>Learning Canvas API with React in Next.js Framework!</h1>
       <div className={styles.canvas_container}>
         <GameWindow />
-        <ClearCanvasButton />
       </div>
     </main>
   );
