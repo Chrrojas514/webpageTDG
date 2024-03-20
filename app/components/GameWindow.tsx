@@ -59,7 +59,7 @@ function GameWindow() {
         onMouseUp={penUp}
       />
       <div className={styles.clearButtonDiv}>
-        <button className={styles.clearButton} onClick={() => handleClearClick()}>Clear Canvas</button>
+        <button className={styles.clearButton} onClick={handleClearClick}>Clear Canvas</button>
       </div>
     </div>
   )
